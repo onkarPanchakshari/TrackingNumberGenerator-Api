@@ -1,7 +1,7 @@
 FROM maven:3-eclipse-temurin-17 AS build
 WORKDIR /app
-COPY pom.xml .
-COPY src ./src
+COPY generator-api/pom.xml .
+COPY generator-api/src ./src
 RUN mvn clean package -DskipTests
 
 
